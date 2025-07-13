@@ -1,4 +1,4 @@
-package ch4_controlflow;
+package ch4_controlflow_if;
 
 // if 문
 // 조건이 참일 때 원하는 코드를 실행시킴
