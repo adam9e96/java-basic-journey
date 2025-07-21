@@ -1,4 +1,4 @@
-package ch4_controlflow_if;
+package ch04_controlflow_if;
 
 /*
  * if-else 문을 중첩하여 사용한 예제

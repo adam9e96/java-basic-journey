@@ -1,4 +1,4 @@
-package ch4_controlflow_if;
+package ch04_controlflow_if;
 
 
 public class IfElseExample01 {
