@@ -1,4 +1,4 @@
-package ch4_controlflow_switch;
+package ch04_controlflow_switch;
 
 public class SwitchExample01 {
     public static void main(String[] args) {
