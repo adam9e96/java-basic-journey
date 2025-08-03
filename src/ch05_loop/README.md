@@ -1,99 +1,117 @@
 # ch05 반복문
+반복문은 특정 조건이 만족하는 동안 동일한 코드를 반복해서 실행하는 제어구조를 말함.
 
-반복문의 종류로는 for문, for-each문, while 문, do ~ while 문이 있음.
+코드의 중복을 줄이고 일정한 패턴의 작업을 효율적으로 처리할수 있게 해줌
 
-for문과 whihle 문은 서로 변환이 가능하기 때문에 반복문을 작성할 때 어느 쪽을 선택해도 좋지만,
-
-for문은 반복 횟수를 알고 있을 때 주로 사용하고, while문은 조건에 따라 반복할 때 사용.
-
-for 반복문은 반복 횟수가 정해져 있을 때 주로 사용되며, 초기식, 조건식, 증감식이 있다.
-
-반복문을 사용하여 일정한 패턴의 작업을 간결하게 표현할 수 있으며, 코드의 가독성을 향상시키고 유지보수를 용이하게 만든다
-
-### ForExample.java
-
-- 반복문을 사용하는 이유
-
-## While
-
-조건식이 true 일 경우에 반복을 수행하는 반복문.
-조건식에는 비교 또는 연산식이 주로 오는데, 조건식이 false 가 되면 반복문을 빠져나온다.
-
-### WhileExample.java
-
-- while문을 사용하는 이유
-
-### DoWhileExample.java
-- Do~While문 사용예시
-
----
-## for 문
-
-### 기본 문법
 ```java
-for (초기화; 조건; 증감) {
-    // 실행할 코드
-}
-```
+// 반복문 없이 1부터 10까지 더하기 (비효율적)
+int num = 1;
+num += 2;
+num += 3;
+num += 4;
+num += 5;
+// ... 계속 반복
 
-#### 기본 사용
-```java
-// 1부터 10까지 출력
+// 반복문 사용 (효율적)
+int sum = 0;
 for (int i = 1; i <= 10; i++) {
-    System.out.println(i);
+    sum += i;
 }
 ```
+## 반복문 종류
+while문, do-while문, for문, for each문(향상된 for문)
 
-#### 배열 순회
+### while문
+while문은 조건식이 참(true)인 동안 반복해서 실행되는 반복문.
+조건을 먼저 검사한 후 실행하므로, 조건이 처음부터 거짓이면 한 번도 실행되지 않을 수 있음.
+
+#### 기본 스타일
 ```java
-int[] numbers = {1, 2, 3, 4, 5};
-for (int i = 0; i < numbers.length; i++) {
-    System.out.println("numbers[" + i + "] = " + numbers[i]);
+초기값;
+while (조건식) {
+    실행문;
+    증감식;
 }
 ```
 
-#### 역순 순회
+**예제:**
 ```java
-for (int i = 10; i >= 1; i--) {
-    System.out.println(i);
+int i = 1; // 초깃값 1로 초기화
+
+while (i < 10) {
+    System.out.println(i); // 조건식
+    i++; // i 값을 1씩 증가시킴
 }
 ```
 
-#### 다양한 증감
+### do while문
+do-while문은 조건식이 맞든 틀리든 일단 한 번은 실행하고 나서 조건식을 검사하는 반복문.
+
+최소 한 번의 실행이 보장됨.
+
+#### 기본 스타일
 ```java
-// 2씩 증가
-for (int i = 0; i <= 20; i += 2) {
-    System.out.println(i);
-}
-
-// 여러 변수 사용
-for (int i = 0, j = 10; i < j; i++, j--) {
-    System.out.println("i: " + i + ", j: " + j);
-}
+do {
+    실행문;
+} while (조건식);
 ```
 
-#### 무한 루프
+**예제:**
 ```java
-for (;;) {
-    // 무한 반복
-    // break를 사용해 탈출
+int num = 100;
+do {
+    System.out.println("적어도 한번은 출력되는 문장");
+} while (num < 10); // 조건을 만족하지 않더라도 1번은 실행된다
+```
+
+### for문
+for문은 초기값, 조건식, 증감식을 한 곳에 모아서 반복을 제어하는 반복문.
+
+반복 횟수가 명확할 때 주로 사용.
+
+#### 기본 스타일
+```java
+for (초기값; 조건식; 증감식) {
+    실행문;
 }
 ```
 
----
+#### 왜 쓰는가?
+- **코드 간결성**: 반복 제어에 필요한 요소들을 한 줄에 명시
+- **가독성**: 반복 구조를 명확하게 파악 가능
+- **효율성**: 반복 횟수가 정해진 경우 최적화된 구조
 
-## 향상된 for 문 (for-each)
+**for문 실행 순서:**
+1. 초기값 실행 (i = 1)
+2. 조건식 확인 (i <= 10)
+3. 조건식이 참이면 명령문 실행
+4. 명령문 실행 후 증감식 실행 (i++)
+5. 2~4번 과정을 조건식이 거짓이 될 때까지 반복
 
-### 기본 문법
+**예제:**
 ```java
-for(타입 변수명 :배열또는컬렉션){
-        // 실행할 코드
-        }
+int sum = 0;
+for (int i = 1; i <= 10; i++) {
+    sum += i;
+    System.out.println("i = " + i + ", sum = " + sum);
+}
 ```
 
-### 예제
+### for each문 (향상된 for문)
 
-#### 배열 순회
+#### 소개
+배열이나 컬렉션의 모든 요소를 순차적으로 접근할 때 사용하는 반복문.
+
+인덱스 없이 요소에 직접 접근할 수 있어 간편.
+
+#### 기본 스타일
+```java
+for (데이터타입 변수명 : 배열또는컬렉션) {
+    실행문;
+}
+```
+
+**예제:**
 ```java
 int[] numbers = {1, 2, 3, 4, 5};
 for (int num : numbers) {
@@ -101,245 +119,17 @@ for (int num : numbers) {
 }
 ```
 
-#### 문자열 배열
-```java
-String[] names = {"Alice", "Bob", "Charlie"};
-for (String name : names) {
-    System.out.println("Hello, " + name);
-}
-```
+### while과 for의 차이점
 
-#### 컬렉션 순회
-```java
-List<String> fruits = Arrays.asList("apple", "banana", "orange");
-for (String fruit : fruits) {
-    System.out.println(fruit.toUpperCase());
-}
-```
+| 구분 | while문 | for문 |
+|------|---------|-------|
+| **사용 목적** | 조건에 따른 반복 | 횟수가 정해진 반복 |
+| **구조** | 조건식만 명시 | 초기값, 조건식, 증감식 모두 명시 |
+| **변수 범위** | 외부에서 선언한 변수 사용 | 반복문 내에서 변수 선언 가능 |
+| **가독성** | 복잡한 조건에서 명확 | 단순 반복에서 명확 |
+| **사용 예** | 사용자 입력 대기, 파일 읽기 | 배열 순회, 카운팅 |
 
-#### 2차원 배열
-```java
-int[][] matrix = {{1, 2, 3}, {4, 5, 6}, {7, 8, 9}};
-for (int[] row : matrix) {
-    for (int element : row) {
-        System.out.print(element + " ");
-    }
-    System.out.println();
-}
-```
-
-### for 문 vs for-each문 비교
-```java
-int[] arr = {1, 2, 3, 4, 5};
-
-// 일반 for문 - 인덱스 접근 가능
-for (int i = 0; i < arr.length; i++) {
-    System.out.println("Index " + i + ": " + arr[i]);
-    arr[i] *= 2; // 배열 수정 가능
-}
-
-// Enhanced for문 - 읽기 전용, 더 간결
-for (int num : arr) {
-    System.out.println(num); // 배열 수정 불가
-}
-```
-
----
-
-## while 문
-
-### 기본 문법
-```java
-while (조건) {
-    // 실행할 코드
-}
-```
-
-### 예제
-
-#### 기본 사용법
-```java
-int i = 1;
-while (i <= 5) {
-    System.out.println(i);
-    i++;
-}
-```
-
-#### 사용자 입력 처리
-```java
-Scanner scanner = new Scanner(System.in);
-String input = "";
-while (!input.equals("quit")) {
-    System.out.print("명령을 입력하세요 (quit으로 종료): ");
-    input = scanner.nextLine();
-    System.out.println("입력된 명령: " + input);
-}
-```
-
-#### 조건부 계속
-```java
-int sum = 0;
-int num = 1;
-while (sum < 100) {
-    sum += num;
-    num++;
-}
-System.out.println("합이 100을 넘는 순간의 합: " + sum);
-```
-
----
-
-## do-while 문
-
-### 기본 문법
-```java
-do {
-    // 실행할 코드
-} while (조건);
-```
-
-### 예제
-
-#### 기본 사용법
-```java
-int i = 1;
-do {
-    System.out.println(i);
-    i++;
-} while (i <= 5);
-```
-
-#### 메뉴 시스템
-```java
-Scanner scanner = new Scanner(System.in);
-int choice;
-do {
-    System.out.println("1. 옵션 1");
-    System.out.println("2. 옵션 2");
-    System.out.println("0. 종료");
-    System.out.print("선택: ");
-    choice = scanner.nextInt();
-    
-    switch (choice) {
-        case 1:
-            System.out.println("옵션 1 선택됨");
-            break;
-        case 2:
-            System.out.println("옵션 2 선택됨");
-            break;
-        case 0:
-            System.out.println("프로그램 종료");
-            break;
-        default:
-            System.out.println("잘못된 선택");
-    }
-} while (choice != 0);
-```
-
-### while vs do-while 비교
-```java
-// while: 조건을 먼저 검사
-int i = 10;
-while (i < 5) {
-    System.out.println("실행되지 않음");
-}
-
-// do-while: 최소 한 번은 실행
-int j = 10;
-do {
-    System.out.println("최소 한 번 실행됨: " + j);
-} while (j < 5);
-```
-
----
-
-## 반복문 제어 키워드
-
-### break
-현재 반복문을 즉시 종료
-```java
-for (int i = 1; i <= 10; i++) {
-    if (i == 5) {
-        break; // i가 5일 때 반복문 종료
-    }
-    System.out.println(i); // 1, 2, 3, 4 출력
-}
-```
-
-### continue
-현재 반복의 나머지 부분을 건너뛰고 다음 반복으로
-```java
-for (int i = 1; i <= 10; i++) {
-    if (i % 2 == 0) {
-        continue; // 짝수일 때 다음 반복으로
-    }
-    System.out.println(i); // 1, 3, 5, 7, 9 출력
-}
-```
----
-
-## 중첩 반복문
-
-### 2차원 배열 처리
-```java
-int[][] matrix = {
-    {1, 2, 3},
-    {4, 5, 6},
-    {7, 8, 9}
-};
-
-// 일반 for문으로 출력
-for (int i = 0; i < matrix.length; i++) {
-    for (int j = 0; j < matrix[i].length; j++) {
-        System.out.print(matrix[i][j] + " ");
-    }
-    System.out.println();
-}
-```
-
-### 구구단 출력
-```java
-for (int i = 2; i <= 9; i++) {
-    System.out.println(i + "단:");
-    for (int j = 1; j <= 9; j++) {
-        System.out.println(i + " × " + j + " = " + (i * j));
-    }
-    System.out.println();
-}
-```
-
-### 별표 패턴
-```java
-// 삼각형 패턴
-for (int i = 1; i <= 5; i++) {
-    for (int j = 1; j <= i; j++) {
-        System.out.print("*");
-    }
-    System.out.println();
-}
-
-// 피라미드 패턴
-int height = 5;
-for (int i = 1; i <= height; i++) {
-    // 공백 출력
-    for (int j = 1; j <= height - i; j++) {
-        System.out.print(" ");
-    }
-    // 별 출력
-    for (int k = 1; k <= 2 * i - 1; k++) {
-        System.out.print("*");
-    }
-    System.out.println();
-}
-```
----
-
-## 💡 요약
-
-| 반복문 종류 | 사용 시점 | 특징 |
-|------------|-----------|------|
-| **for** | 반복 횟수가 정해진 경우 | 초기화, 조건, 증감을 한 줄에 |
-| **Enhanced for** | 배열/컬렉션 순회 | 간결하고 안전, 읽기 전용 |
-| **while** | 조건에 따른 반복 | 조건을 먼저 검사 |
-| **do-while** | 최소 한 번은 실행 | 실행 후 조건 검사 |
+**권장 사용법:**
+- **for문**: 반복 횟수가 명확하거나 배열/컬렉션 순회시
+- **while문**: 특정 조건까지 반복하거나 무한루프가 필요할 때
+- **do-while문**: 최소 한 번의 실행이 필요할 때

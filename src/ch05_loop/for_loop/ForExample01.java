@@ -1,6 +1,6 @@
-package ch05_loop;
+package ch05_loop.for_loop;
 
-public class ForExample {
+public class ForExample01 {
     public static void main(String[] args) {
 
         // 반복문이 필요한 이유
