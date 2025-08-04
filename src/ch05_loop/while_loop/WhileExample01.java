@@ -1,8 +1,7 @@
-package ch05_loop;
+package ch05_loop.while_loop;
 
-public class WhileExample {
+public class WhileExample01 {
     public static void main(String[] args) {
-
 
         int i = 1; // 초깃값 1로 초기화
 
