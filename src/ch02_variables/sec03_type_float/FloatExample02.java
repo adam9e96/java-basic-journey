@@ -1,6 +1,6 @@
 package ch02_variables.sec03_type_float;
 
-public class FloatDoubleExample {
+public class FloatExample02 {
     public static void main(String[] args) {
         // float 타입 비교(정밀도)
         float var1 = 0.1234567890123456789f;
