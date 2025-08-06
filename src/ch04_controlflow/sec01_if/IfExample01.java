@@ -1,11 +1,9 @@
-package ch04_controlflow_if;
+package ch04_controlflow.sec01_if;
 
 // if 문
 // 조건이 참일 때 원하는 코드를 실행시킴
 public class IfExample01 {
     public static void main(String[] args) {
-
-
         // GradeChecker by only If Condition
         // score 점수가 93일때 90보다 큰지 작은지, 등급은 몇인지 조회
         // 정수형 타입을 통한 조건검증

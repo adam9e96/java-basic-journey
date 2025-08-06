@@ -1,11 +1,11 @@
-package ch04_controlflow_if;
+package ch04_controlflow.sec03_if_nest;
 
 /*
  * if-else 문을 중첩하여 사용한 예제
  *  이 예제는 점수에 따라 학점을 계산하는 프로그램입니다.
  *  점수는 난수로 생성
  */
-public class IfNestedExample {
+public class IfNestedExample01 {
     public static void main(String[] args) {
         int score = (int) (Math.random() * 20) + 81; // 81 ~ 100 사이 난수
 

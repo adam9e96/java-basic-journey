@@ -1,4 +1,4 @@
-package ch04_controlflow_if;
+package ch04_controlflow.sec01_if;
 
 import java.util.Scanner;
 

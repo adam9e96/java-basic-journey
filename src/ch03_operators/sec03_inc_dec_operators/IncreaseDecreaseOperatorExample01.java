@@ -1,6 +1,6 @@
-package ch03_operators;
+package ch03_operators.sec03_inc_dec_operators;
 
-public class IncreaseDecreaseOperatorExample {
+public class IncreaseDecreaseOperatorExample01 {
     public static void main(String[] args) {
         int x = 10;
         int y = 10;
