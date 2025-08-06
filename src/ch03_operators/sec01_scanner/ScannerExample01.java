@@ -41,5 +41,6 @@ public class ScannerExample01 {
         // 100.0
         // false
         // abc def
+        scanner.close();
     }
 }
