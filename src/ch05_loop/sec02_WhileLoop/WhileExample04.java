@@ -1,4 +1,4 @@
-package ch05_loop.while_loop;
+package ch05_loop.sec02_WhileLoop;
 
 import java.util.Scanner;
 

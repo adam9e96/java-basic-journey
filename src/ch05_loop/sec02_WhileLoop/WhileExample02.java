@@ -1,4 +1,4 @@
-package ch05_loop.while_loop;
+package ch05_loop.sec02_WhileLoop;
 
 public class WhileExample02 {
     public static void main(String[] args) {
