@@ -1,4 +1,4 @@
-package ch05_loop;
+package ch05_loop.sec03_DoWhileLoop;
 
 public class DoWhileExample {
     public static void main(String[] args) {

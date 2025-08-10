@@ -1,4 +1,4 @@
-package ch05_loop.for_loop;
+package ch05_loop.sec01_ForLoop;
 
 public class ForExample01 {
     public static void main(String[] args) {

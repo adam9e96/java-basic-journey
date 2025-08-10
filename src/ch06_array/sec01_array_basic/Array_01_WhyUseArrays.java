@@ -1,4 +1,4 @@
-package ch06_array;
+package ch06_array.sec01_array_basic;
 
 public class Array_01_WhyUseArrays {
     public static void main(String[] args) {
@@ -41,7 +41,7 @@ public class Array_01_WhyUseArrays {
         System.out.println("총점은 " + total + "점이고, 평균은 " + avg + "입니다.");
 
         /*
-         * new 키워드가 안보이는 경우
+         * new 키워드가 안보이는 이유
          * 원래라면 new int[5]; 를 해야 하는데 개발자가 일일히 만들고 초기화 하는게 귀찮으니
          * 바로 배열생성 및 초기화를 하는 경우는 `new` 키워드는 알아서 적용 되도록 했다.
          */

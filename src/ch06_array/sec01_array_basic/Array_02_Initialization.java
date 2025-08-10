@@ -1,9 +1,9 @@
-package ch06_array;
+package ch06_array.sec01_array_basic;
 
 /**
  * 자바에서 배열을 초기화 하는 여러가지 방법
  */
-public class Array_02_InitializationMethods {
+public class Array_02_Initialization {
     public static void main(String[] args) {
 
         /**

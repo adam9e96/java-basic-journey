@@ -1,11 +1,11 @@
-package ch06_array;
+package ch06_array.sec06_array_problems;
 
 import java.util.Scanner;
 
 /**
  * 학생의 수와 각 학생들의 점수를 입력받아 최고 점수 및 평균 점수를 계산하는 프로그램
  */
-public class Array_06_Ex02 {
+public class Array_Ex01 {
     public static void main(String[] args) {
 	/* 키보드로 부터 학생 수와 각 학생들의 점수를 입력받아서, 최고 점수 및 평균 점수를 구하는 프로그램입니다.
         실행결과를 보고 알맞게 작성해 보세요.

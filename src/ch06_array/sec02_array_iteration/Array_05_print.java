@@ -1,10 +1,10 @@
-package ch06_array;
+package ch06_array.sec02_array_iteration;
 
 /**
  * 주어진 배열의 합을 계산하는 프로그램
  * 여러 방법으로 객체 요소의 합을 구해보기
  */
-public class Array_05_Ex01 {
+public class Array_05_print {
     public static void main(String[] args) {
 
         // 1. for 문을 이용해서 배열 요소의 합을 구하기
