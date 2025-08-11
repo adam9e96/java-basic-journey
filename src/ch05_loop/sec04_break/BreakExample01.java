@@ -1,7 +1,7 @@
-package ch05_loop.sec_break;
+package ch05_loop.sec04_break;
 
 import java.util.Scanner;
-
+// break는 가장 가까운 loop(반복문)를 빠져나옴
 public class BreakExample01 {
 	public static void main(String[] args) {
 		Scanner scanner = new Scanner(System.in);

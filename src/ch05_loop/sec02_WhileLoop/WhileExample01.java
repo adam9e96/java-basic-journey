@@ -9,5 +9,6 @@ public class WhileExample01 {
             System.out.println(i); // 조건식
             i++; // i 값을 1씩 증가시킴
         }
+//        System.out.println(i);
     }
 }
