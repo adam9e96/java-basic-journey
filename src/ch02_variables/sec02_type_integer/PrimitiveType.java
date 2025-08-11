@@ -1,8 +1,8 @@
 package ch02_variables.sec02_type_integer;
 
 /**
- * 기본형 타입
- * byte, short, int, long
+ * 정수 타입
+ * byte, short, int, long, char
  */
 public class PrimitiveType {
     public static void main(String[] args) {
