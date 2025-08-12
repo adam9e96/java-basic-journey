@@ -1,12 +1,12 @@
 # ch07 - Java 메서드(Method)
 
 ## 메서드란?
-특정한 작업을 수행하는 코드의 집합으로, **재사용 가능한 기능 단위**입니다.
+특정한 작업을 수행하는 코드의 집합
 
 ```java
-접근제어자 반환타입 메서드명(매개변수) {
+접근제어자 [static] 반환타입 메서드명(매개변수) {
     // 실행할 코드
-    return 반환값;
+    return 반환값; // 반환타입이 void 가 아니면 필수
 }
 ```
 
@@ -18,16 +18,58 @@ static int getMax(int a, int b, int c) {
     if (c > max) max = c;
     return max;
 }
-```
 
-- `static` : 접근제어자
-- `int` : 반환타입
-- `getMax` : 메서드명
-- `(int a, int b, int c)` : 매개변수
-- `{ ... }` : 메서드 본체
+public int add(int a, int b){
+    return a + b;
+}
+```
+## 메서드 구조 설명
+1. **접근 제어자**
+    * public, private, protected, (default)
+    * 외부에서 이 메서드를 얼마나 접근할 수 있는지 결정
+2. **static 여부**
+    * `static` → 객체 생성 없이 호출 가능 (클래스 메서드)
+    * 비static → 객체를 생성해야 호출 가능 (인스턴스 메서드)
+3. **반환 타입**
+    * int, double, String 등 기본·참조형
+    * `void` → 아무 값도 반환하지 않음
+4. **메서드 이름**
+    * 소문자로 시작, camelCase 권장 (`calculateSum`)
+5. **매개변수**
+    * 호출 시 전달받는 값 (여러 개 가능, 자료형 지정 필수)
+6. **메서드 본문**
+    * 중괄호 `{}` 안에 실행 코드 작성
+7. **return 문**
+    * 반환 타입이 void가 아니면 반드시 값 반환
+
+## 메서드 호출
+
+```java
+public class Calculator {
+    public int add(int a, int b) {
+        return a + b;
+    }
+    
+    public static void main(String[] args) {
+        Calculator cal = new Calculator();  // 객체 생성
+        int result = cal.add(5, 3);          // 호출
+        System.out.println(result);          // 8
+    }
+}
+```
+## 메서드 종류
+* **인스턴스 메서드**: 객체 생성 후 호출 (`obj.methodName()`)
+* **클래스 메서드 (static)**: 클래스명으로 직접 호출 (`ClassName.methodName()`)
+* **Getter / Setter**: 객체 속성 읽기·변경용
+* **메서드 오버로딩**: 같은 이름, 다른 매개변수
+
+  ```java
+  void print(int x) { ... }
+  void print(String s) { ... }
+  ```
+* **메서드 오버라이딩**: 상속받은 메서드 재정의
 
 ---
-
 ## 메서드가 필요한 이유
 
 ### 1. 코드 재사용 

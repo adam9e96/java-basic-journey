@@ -1,9 +1,9 @@
-package ch07_method;
+package ch07_method.sec02_ex;
 
 /**
  * 두 숫자의 합을 계산하는 메서드를 이용하여 계산하기
  */
-public class Method_06_Ex {
+public class Method02_ex {
 
     /**
      * 두 정수의 합을 계산하여 반환
@@ -19,7 +19,7 @@ public class Method_06_Ex {
         int num2 = 20;
         int result = 0;
 
-        Method_06_Ex method = new Method_06_Ex();
+        Method02_ex method = new Method02_ex();
         result = method.add(num1,num2);
 
         System.out.println(" 두 수의 합은: "+result);

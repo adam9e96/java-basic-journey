@@ -1,11 +1,11 @@
-package ch07_method;
+package ch07_method.sec02_ex;
 
 /**
  * 주어진 밑변과 높이를 사용하여 사각형의 넓이를 계산하는 메서드를 만들기
  * <p>
  * 계산은 calculator() 메서드를 통하도록 하기
  */
-public class Method_05_Ex {
+public class Method01_ex {
     public static void main(String[] args) {
         // 밑변 30, 높이 10인 사각형의 넓이를 계산하여 출력
         int width = 30;
