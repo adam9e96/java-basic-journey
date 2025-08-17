@@ -1,6 +1,6 @@
-package ch08_class;
+package ch08_class.sec01_ClassUse;
 
-public class Class_02 {
+public class ClassExample02 {
     public static void main(String[] args) {
         // 같은 클래스를 가지고 만든 두 객체는 구조는 동일하지만 서로 다른 저장공간을 가짐
         Car myCar1 = new Car(); // car 인스턴스 생성

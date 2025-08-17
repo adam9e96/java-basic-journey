@@ -1,4 +1,4 @@
-package ch08_class;
+package ch08_class.sec01_ClassUse;
 
 class Car {
     // 힙 메모리 공간에 들어감
@@ -27,7 +27,7 @@ class Car {
     }
 }
 
-public class Class_01 {
+public class ClassExample01 {
     public static void main(String[] args) {
         Car myCar; // 클래스의 객체를 참조하는 참조변수 선언
         myCar = new Car(); // 클래스의 객체를 생성하고 객체의 주소를 참조변수(myCar)에 저장
