@@ -1,4 +1,4 @@
-package ch07_method;
+package ch07_method.sec01;
 
 import java.util.Scanner;
 
@@ -6,7 +6,7 @@ import java.util.Scanner;
  * 계산기 프로그램
  * 메서드를 사용하지 않은 경우
  */
-public class Method_03_NotUseMethod2 {
+public class Method05_NotUse {
     public static void main(String[] args) {
         Scanner scanner = new Scanner(System.in);
 

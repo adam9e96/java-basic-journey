@@ -1,4 +1,4 @@
-package ch07_method;
+package ch07_method.sec01;
 
 import java.util.Scanner;
 
@@ -6,7 +6,7 @@ import java.util.Scanner;
  * 계산기 프로그램
  * 메서드를 이용한 경우
  */
-public class Method_04_UseMethod2 {
+public class Method06_Use {
     static Scanner scanner = new Scanner(System.in);
 
     // 숫자 입력 메서드

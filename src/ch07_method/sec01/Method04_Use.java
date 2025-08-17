@@ -1,4 +1,4 @@
-package ch07_method;
+package ch07_method.sec01;
 
 import java.util.Scanner;
 
@@ -11,7 +11,7 @@ import java.util.Scanner;
  * 각 기능이 명확하게 분리되어 가독성 향상됨
  * 새 학생 추가시 processStudent("학생4"); 한줄만 추가하면됨
  */
-public class Method_02_UseMethod {
+public class Method04_Use {
     static Scanner scanner = new Scanner(System.in);
 
     // 점수 입력 메서드

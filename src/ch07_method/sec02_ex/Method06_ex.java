@@ -303,9 +303,9 @@ public class Method06_ex {
 		for (int i = 0; i < scores[idx].length; i++) {
 			scores[idx][i] = 0;
 		}
-		System.out.println("┌───────────────────────────┐");
+		System.out.println("┌──────────────────────────┐");
 		System.out.println("│ 삭제가 완료되었습니다     │");
-		System.out.println("└───────────────────────────┘");
+		System.out.println("└──────────────────────────┘");
 	}
 
 	public static void getExit() {
