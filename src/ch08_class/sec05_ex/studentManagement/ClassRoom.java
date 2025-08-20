@@ -16,6 +16,7 @@ public class ClassRoom {
         this.students = new Student[MAX_STUDENT];
     }
 
+    // 생성한 학생수가 5이상이면 빠꾸시키기
     private boolean checkCreate() {
         if (studentCount >= MAX_STUDENT) {
             MessageBox.getExceedStudent();
@@ -29,47 +30,15 @@ public class ClassRoom {
         if (checkCreate()) {
             return;
         }
-
-        try {
-            String tempName = "";
-            int kor, eng, math = 0;
-
-            System.out.print("이름: ");
-            tempName = sc.next();
-
-            if (tempName.equals("null")) {
-                MessageBox.getNotNullName();
-            } else {
-                System.out.print("국어: ");
-                kor = sc.nextInt();
-                System.out.print("수학: ");
-                math = sc.nextInt();
-                System.out.print("영어: ");
-                eng = sc.nextInt();
-
-                // 입력 테스트
-//				System.out.println(studentCount); // 0
-//				System.out.println(tempName + kor + math + eng);
-
-                // 여기까지 왔으면 문제없는거라 값 저장
-                students[studentCount] = new Student(tempName, kor, math, eng);
-                students[studentCount].calSum();
-                students[studentCount].calAvg();
-                // 테스트 코드
-                students[studentCount].printStudent();
-                studentCount++; // 학생수 증가 0 --> 1
-
-                // 테스트 코드
-                System.out.println(studentCount);
-            }
-        } catch (Exception e) {
-            System.out.println(e);
-            sc.nextLine();
-            System.out.println("┌──────────────────────────────┐");
-            System.out.println("│ 점수는 정수만 입력가능합니다 다시하세요  │");
-            System.out.println("└──────────────────────────────┘");
+//		inputValue(sc);
+        Student st = inputValue(sc);
+        // 1번
+        if (st != null) {
+            students[studentCount] = new Student(st.name, st.kor, st.eng, st.math);
+            students[studentCount].calSum();
+            students[studentCount].calAvg();
+            studentCount++;
         }
-
     }
 
     public void getPrint() {
@@ -102,9 +71,7 @@ public class ClassRoom {
 
     private boolean checkStudent() {
         if (studentCount == 0) {
-            System.out.println("┌───────────────────────────────┐");
-            System.out.println("│ 학생이 없습니다! 학생 추가가 필요합니다  │");
-            System.out.println("└───────────────────────────────┘");
+            MessageBox.getEmptyStudent();
             return true;
         }
         return false;
@@ -134,6 +101,35 @@ public class ClassRoom {
 
     }
 
+    private Student inputValue(Scanner sc) {
+        String tempName = "";
+        int kor, eng, math = 0;
+        try {
+            System.out.print("이름: ");
+            tempName = sc.next();
+
+            if (tempName.equals("null")) {
+                MessageBox.getNotFound();
+                return null;
+            } else {
+                System.out.print("국어: ");
+                kor = sc.nextInt();
+                System.out.print("영어: ");
+                eng = sc.nextInt();
+                System.out.print("수학: ");
+                math = sc.nextInt();
+                return new Student(tempName, kor, eng, math);
+            }
+
+        } catch (Exception e) {
+            System.out.println(e.toString());
+            sc.nextLine();
+            MessageBox.noticeInputTypeMiss();
+        }
+        return null;
+
+    }
+
     public void updateStudent(Scanner sc) {
         if (checkStudent()) {
             return;
@@ -144,59 +140,24 @@ public class ClassRoom {
         System.out.print("수정 번호:");
         try {
             updateNum = sc.nextInt(); // 수정할 번호
-            idx = studentCount - 1;
         } catch (InputMismatchException e) {
-//            System.out.println(e.toString());
-            System.out.println("┌─────────────────────────┐");
-            System.out.println("│ 정수만 입력가능합니다 다시하세요  │");
-            System.out.println("└─────────────────────────┘");
-            sc.nextLine();
-            return;
+            MessageBox.noticeInputTypeMiss();
         }
 
-        // 업데이트 로직
+        idx = updateNum - 1;
+
         if (checkUpdate(updateNum, idx)) {
-            String tempName = "";
-            int kor, eng, math = 0;
-            System.out.print("이름: ");
-            try {
-                tempName = sc.next();
-                // 문자로 null 입력 방지
-                // 이건 1번 생성로직이랑 동일함
-                if (tempName.equals("null")) {
-                    System.out.println("┌─────────────────────────┐");
-                    System.out.println("│ 이름으로 null은 사용불가능합니다 │");
-                    System.out.println("└─────────────────────────┘");
-                } else {
-                    System.out.print("국어: ");
-                    kor = sc.nextInt();
-                    System.out.print("수학: ");
-                    math = sc.nextInt();
-                    System.out.print("영어: ");
-                    eng = sc.nextInt();
+            Student st = inputValue(sc);
 
-                    students[updateNum - 1] = new Student(tempName, kor, math, eng);
-                    students[updateNum - 1].calSum();
-                    students[updateNum - 1].calAvg();
-                    // 테스트 코드
-//					students[updateNum - 1].printStudent();
-
-                    // 테스트 코드
-//					System.out.println(studentCount);
-                    System.out.println("┌─────────────────┐");
-                    System.out.println("│ 수정이 완료되었습니다  │");
-                    System.out.println("└─────────────────┘");
-
-                }
-
-            } catch (Exception e) {
-                System.out.println(e);
-                System.out.println("┌─────────────────────────┐");
-                System.out.println("│ 정수만 입력가능합니다 다시하세요  │");
-                System.out.println("└─────────────────────────┘");
-                sc.nextLine();
+            if (st != null) {
+                // 실제 업데이트
+                students[idx] = new Student(st.name, st.kor, st.eng, st.math);
+                students[idx].calSum();
+                students[idx].calAvg();
+                MessageBox.updateComplete();
             }
         }
+
     }
 
     private boolean checkDelete(int deleteNum, int idx) {
@@ -224,21 +185,18 @@ public class ClassRoom {
     }
 
     public void deleteStudent(Scanner sc) {
-        if (checkStudent()) {
-            return;
-        }
+        if (checkStudent()) return;
+
         int deleteNum = 0;
         int idx = 0;
 
         System.out.print("삭제할 번호: ");
         try {
-            deleteNum = sc.nextInt(); // 수정할 번호
+            deleteNum = sc.nextInt(); // 삭제할 번호
             idx = deleteNum - 1;
         } catch (InputMismatchException e) {
             System.out.println(e);
-            System.out.println("┌─────────────────────────┐");
-            System.out.println("│ 정수만 입력가능합니다 다시하세요  │");
-            System.out.println("└─────────────────────────┘");
+            MessageBox.noticeInputTypeMiss();
             sc.nextLine();
             return;
         }
@@ -252,31 +210,32 @@ public class ClassRoom {
 
             students[idx].printStudent();
             // 학생수 감소는 안시킴
-            System.out.println("┌──────────────────────────┐");
-            System.out.println("│ 삭제가 완료되었습니다     │");
-            System.out.println("└──────────────────────────┘");
-
+            MessageBox.deleteComplete();
         }
     }
 
-    private boolean checkSearchStudent(String searchName) {
+    private int[] checkSearchStudent(String searchName) {
+        int[] temp = new int[studentCount];
+        int count = 0;
         for (int i = 0; i < studentCount; i++) {
             // null 검사부터
             if (students[i].name != null && students[i].name.contains(searchName)) {
-                return true;
+                temp[count++] = i;
             }
         }
-        return false;
+//        int[] tt = Arrays.copyOf(temp, count);
+//        System.out.println(Arrays.toString(tt));
+        return Arrays.copyOf(temp, count); //검색된 개수만큼 잘라서 반환
     }
 
     public void searchStudent(Scanner sc) {
-        if (checkStudent()) {
-            return;
-        }
+        if (checkStudent()) return;
 
         System.out.print("검색할 이름: ");
         String searchName = sc.next();
-        if (checkSearchStudent(searchName)) {
+
+        int[] results = checkSearchStudent(searchName);
+        if (results.length > 0) {
             System.out.print("┌───────────────────────────────────────────────────────┐\n");
             System.out.print("│번호\t이름\t국어\t영어\t수학\t총점\t평균\t│\n");
             for (int i = 0; i < studentCount; i++) {
@@ -292,26 +251,27 @@ public class ClassRoom {
                 }
             }
             System.out.print("└───────────────────────────────────────────────────────┘\n");
-            System.out.println("┌──────────┐");
-            System.out.println("│  검색 완료  │");
-            System.out.println("└──────────┘");
+            MessageBox.searchComplete();
         } else {
-            System.out.println("┌───────────────────────┐");
-            System.out.println("│ 검색 결과가 없습니다  │");
-            System.out.println("└───────────────────────┘");
+            MessageBox.searchEmpty();
         }
     }
 
     private int[] copyTotals() {
         int temp = 0;
         int[] sortTemp = new int[MAX_STUDENT];
+        int count = 0;
 
+        // 1. 학생배열의 총점만 뽑아서 순차적으로 저장시킴(이름 null은 제외시켜 삭제된 학생은 X)
         for (int i = 0; i < studentCount; i++) {
             if (students[i].name != null) {
                 sortTemp[i] = students[i].getTotal();
+                count++;
             }
-
         }
+//        System.out.println("dd: "+Arrays.toString(sortTemp));
+
+        // 버블 정렬
         for (int i = 0; i < studentCount - 1; i++) {
             for (int j = 0; j < studentCount - 1 - i; j++) {
                 if (sortTemp[j] < sortTemp[j + 1]) {
@@ -321,21 +281,22 @@ public class ClassRoom {
                 }
             }
         }
-        System.out.println(Arrays.toString(sortTemp));
-        return sortTemp;
+//        System.out.println(Arrays.toString(sortTemp));
+//        int[] test = Arrays.copyOf(sortTemp, count);
+//        System.out.println(Arrays.toString(test));
+
+        return Arrays.copyOf(sortTemp, count);
     }
 
     public void getPrintOrderByTotal() {
-        if (checkStudent()) {
-            return;
-        }
+        if (checkStudent()) return;
+
         int[] sortTemp = copyTotals();
 
         System.out.print("┌───────────────────────────────────────────────────────┐\n");
         System.out.print("│번호\t이름\t국어\t영어\t수학\t총점\t평균\t│\n");
-        for (int i = 0; i < studentCount; i++) { // 학생 수 만큼 반복
+        for (int i = 0; i < sortTemp.length; i++) { // 학생 수 만큼 반복
             for (int j = 0; j < studentCount; j++) {
-//				if (name[j] != null) {
                 if (students[j].name != null && sortTemp[i] == students[j].getTotal()) {
                     System.out.print("|" + (j + 1) + "\t");
                     System.out.print(students[j].name + "\t");
@@ -348,18 +309,10 @@ public class ClassRoom {
             }
         }
         System.out.print("└───────────────────────────────────────────────────────┘\n");
-        System.out.println("┌────────────┐");
-        System.out.println("│  출력완료  │");
-        System.out.println("└────────────┘");
+        MessageBox.searchComplete();
     }
 
     private File makeFileInstance(String fileName) {
-        // 1. 강의실 경로
-//		String filePath = "D:\\java\\javaBasic\\src\\ch07_method\\sec02_ex\\data\\save.txt";
-
-        // 2. 집_서피스프로_윈도우11
-//		String filePathSurface = "D:\\Project\\Study\\JavaBasicJourney\\src\\ch07_method\\sec02_ex\\data\\save.txt";
-
         // 3. 페도라
         String filePathFedora = "src/ch08_class/sec05_ex/studentManagement/data/" + fileName + ".txt";
 
@@ -399,6 +352,7 @@ public class ClassRoom {
             } else { // 파일이 존재하지 않으면
                 file.createNewFile(); // 신규 파일 생성
             }
+
             BufferedWriter bw = new BufferedWriter(new FileWriter(file, false));
 
             // 저장
@@ -426,20 +380,21 @@ public class ClassRoom {
             // 버퍼 및 스트림 뒷정리
             bw.flush(); // 버퍼의 남은 데이터 모두 쓰기
             bw.close(); // 스트림 종료
-            System.out.println("┌───────────────────────────┐");
-            System.out.println("│ 저장이 완료되었습니다      │");
-            System.out.println("└───────────────────────────┘");
+            MessageBox.makeComplete();
         } catch (Exception e) {
             System.out.println(e.toString());
         }
     }
 
     public void readFile(Scanner sc) {
+
         File dir = readFileInstance();
+
         if (!dir.exists() || !dir.isDirectory()) {
             System.out.println("data 폴더가 존재하지 않음");
             return;
         }
+
         // 폴더 안의 모든 파일 조회
         File[] files = dir.listFiles();
 
@@ -447,14 +402,15 @@ public class ClassRoom {
             System.out.println("data 폴더 안에 파일이 없음");
             return;
         }
-        System.out.println("┌───────────────────────────┐");
-        System.out.println("│ data 폴더 안의 파일 목록:  │");
-        for (File file : files) {
-            System.out.println(file.getName());
-        }
-        System.out.println("└───────────────────────────┘");
 
-        System.out.print("로드할 텍스트 파일을 입력하세요: " + " ex) save\n>>> ");
+        System.out.println("+-------------------------+");
+        System.out.println("| data 폴더 안의 파일 목록  |");
+        for (File file : files) {
+            System.out.println("|" + file.getName() + "\t");
+        }
+        System.out.println("+-------------------------+");
+
+        System.out.print("로드할 텍스트 파일이름을 입력하세요. " + " ex) save\n>>> ");
         String loadName = sc.next();
 
         File file = makeFileInstance(loadName);
@@ -462,36 +418,28 @@ public class ClassRoom {
             BufferedReader br = new BufferedReader(new FileReader(file));
             String line = null;
             String[] nameTemp = null;
-            int tempIdx = 0;
             studentCount = 0;
+
             while ((line = br.readLine()) != null) {
                 nameTemp = line.split(",");
                 if (!nameTemp[0].equals("null")) {
-                    students[tempIdx] =
-                            new Student(
-                                    nameTemp[0],
-                                    Integer.parseInt(nameTemp[1]),
-                                    Integer.parseInt(nameTemp[2]),
-                                    Integer.parseInt(nameTemp[3]),
-                                    Integer.parseInt(nameTemp[4]),
-                                    Double.parseDouble(nameTemp[5])
-                            );
+                    students[studentCount] = new Student(
+                            nameTemp[0],
+                            Integer.parseInt(nameTemp[1]),
+                            Integer.parseInt(nameTemp[2]),
+                            Integer.parseInt(nameTemp[3]),
+                            Integer.parseInt(nameTemp[4]),
+                            Double.parseDouble(nameTemp[5]));
                 } else {
-                    students[tempIdx] = new Student(null, 0, 0, 0, 0, 0.0);
+                    students[studentCount] = new Student(null, 0, 0, 0, 0, 0.0);
                 }
-                tempIdx++;
                 studentCount++;
             }
             br.close();
-            System.out.println("┌───────────────────────────┐");
-            System.out.println("│ 로드가 완료되었습니다     │");
-            System.out.println("└───────────────────────────┘");
-
+            MessageBox.loadComplete();
         } catch (Exception e) {
             System.out.println(e.toString());
 
         }
     }
-
-
 }
