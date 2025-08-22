@@ -1,4 +1,4 @@
-package ch12_Inheritance.sec01;
+package ch12_Inheritance.sec01_Extends;
 // 부모 클래스에서 매개변수가 있는 생성자만 있는 경우:
 // 자식클래스에서 super(); X 부모클래스 생성자 파라미터에 맞게 super(매개변수, ...) 만들어야함
 // 기본생성자였거나 만들지 않았다면 super()도 자식클래스에서 안만들어도 컴파일러가

@@ -1,4 +1,4 @@
-package ch12_Inheritance.sec01;
+package ch12_Inheritance.sec01_Extends;
 
 // 부모 클래스가 기본 생성자가 있는 경우
 class Phone02 {
