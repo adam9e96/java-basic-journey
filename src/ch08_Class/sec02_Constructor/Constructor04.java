@@ -1,4 +1,4 @@
-package ch08_class.sec02_constructor;
+package ch08_Class.sec02_Constructor;
 
 // 다른 생성자 호출 this()사용
 class Car3 {

@@ -1,4 +1,4 @@
-package ch08_class.sec01_ClassUse;
+package ch08_Class.sec01_ClassUse;
 
 public class Circle {
 	public int radius; // 원의 반지름 필드

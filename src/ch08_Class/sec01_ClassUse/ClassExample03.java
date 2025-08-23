@@ -1,4 +1,4 @@
-package ch08_class.sec01_ClassUse;
+package ch08_Class.sec01_ClassUse;
 
 class HighSchool {
     String name;

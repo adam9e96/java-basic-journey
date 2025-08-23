@@ -1,6 +1,7 @@
-package ch08_class.sec02_constructor;
+package ch08_Class.sec02_Constructor;
 
 // 생성자 만들기
+// 디폴트 생성자는 컴파일러가 안만들어줌
 class Korean {
     // 필드 선언
     String nation = "대한민국";

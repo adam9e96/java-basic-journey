@@ -1,4 +1,4 @@
-package ch08_class.sec01_ClassUse;
+package ch08_Class.sec01_ClassUse;
 
 class Car {
     // 힙 메모리 공간에 들어감

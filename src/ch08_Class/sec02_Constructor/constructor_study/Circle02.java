@@ -1,4 +1,4 @@
-package ch08_class.sec02_constructor.constructor_study;
+package ch08_Class.sec02_Constructor.constructor_study;
 
 public class Circle02 {
 	int radius;

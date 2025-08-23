@@ -1,4 +1,4 @@
-package ch08_class.sec02_constructor;
+package ch08_Class.sec02_Constructor;
 
 // 생성자 오버로딩 예제
 class Book {

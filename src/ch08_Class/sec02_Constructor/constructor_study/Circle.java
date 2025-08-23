@@ -1,4 +1,4 @@
-package ch08_class.sec02_constructor.constructor_study;
+package ch08_Class.sec02_Constructor.constructor_study;
 
 public class Circle {
 	public int radius; // 원의 반지름 필드
