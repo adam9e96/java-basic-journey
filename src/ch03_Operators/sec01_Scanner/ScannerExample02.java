@@ -1,4 +1,4 @@
-package ch03_operators.sec01_scanner;
+package ch03_Operators.sec01_Scanner;
 
 import java.util.Scanner;
 

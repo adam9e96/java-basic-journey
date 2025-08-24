@@ -1,4 +1,4 @@
-package ch03_operators.sec01_scanner; // Scanner 클래스 호출
+package ch03_Operators.sec01_Scanner; // Scanner 클래스 호출
 
 import java.util.Scanner;
 

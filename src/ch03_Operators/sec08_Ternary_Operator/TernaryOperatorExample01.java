@@ -1,4 +1,4 @@
-package ch03_operators.sec06_ternary_operator;
+package ch03_Operators.sec08_Ternary_Operator;
 
 public class TernaryOperatorExample01 {
 	public static void main(String[] args) {

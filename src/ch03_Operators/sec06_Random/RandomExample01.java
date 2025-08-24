@@ -1,4 +1,4 @@
-package ch03_operators.sec06_random;
+package ch03_Operators.sec06_Random;
 
 import java.util.Random;
 
