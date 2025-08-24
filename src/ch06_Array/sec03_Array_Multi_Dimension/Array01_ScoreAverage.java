@@ -1,6 +1,6 @@
-package ch06_array.sec04_array_multi_dimensional;
+package ch06_Array.sec03_Array_Multi_Dimension;
 
-public class Array_Multi01_ScoreAverage {
+public class Array01_ScoreAverage {
     public static void main(String[] args) {
 
         double[][] score = { // 처음 {}가 줄개수임, 그 {}안에 있는 개수가 칸의개수(2차원 기준)

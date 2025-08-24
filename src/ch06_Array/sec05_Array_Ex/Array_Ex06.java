@@ -1,6 +1,4 @@
-package ch06_array.sec06_array_problems;
-
-import java.util.Arrays;
+package ch06_Array.sec05_Array_Ex;
 
 public class Array_Ex06 {
     public static void main(String[] args) {

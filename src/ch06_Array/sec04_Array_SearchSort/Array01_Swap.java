@@ -1,4 +1,4 @@
-package ch06_array.sec05_array_search_sort;
+package ch06_Array.sec04_Array_SearchSort;
 
 import java.util.Arrays;
 

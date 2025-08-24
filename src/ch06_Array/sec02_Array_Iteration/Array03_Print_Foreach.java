@@ -1,6 +1,6 @@
-package ch06_array.sec02_array_iteration;
+package ch06_Array.sec02_Array_Iteration;
 
-public class Array_06_print_foreach {
+public class Array03_Print_Foreach {
 	enum Week { 월, 화, 수, 목, 금, 토, 일 }
 
 	public static void main(String[] args) {

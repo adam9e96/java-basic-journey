@@ -1,4 +1,4 @@
-package ch06_array.sec06_array_problems;
+package ch06_Array.sec05_Array_Ex;
 
 import java.util.Arrays;
 import java.util.Scanner;

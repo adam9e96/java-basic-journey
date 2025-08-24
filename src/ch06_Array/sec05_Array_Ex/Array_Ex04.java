@@ -1,4 +1,4 @@
-package ch06_array.sec06_array_problems;
+package ch06_Array.sec05_Array_Ex;
 
 public class Array_Ex04 {
 	public static void main(String[] args) {

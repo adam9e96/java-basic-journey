@@ -1,11 +1,11 @@
-package ch06_array.sec01_array_basic;
+package ch06_Array.sec01_Array;
 
 import java.util.Arrays;
 import java.util.Collections;
 import java.util.List;
 import java.util.stream.IntStream;
 
-public class Array_03_Initialization {
+public class Array03_Initialization {
     public static void main(String[] args) {
         /*
          * 1. Arrays.fill() 메소드 사용

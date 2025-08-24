@@ -1,6 +1,6 @@
-package ch06_array.sec04_array_multi_dimensional;
+package ch06_Array.sec03_Array_Multi_Dimension;
 
-public class Array_Multi02 {
+public class Array02 {
     public static void main(String[] args) {
 
         // [2][3]

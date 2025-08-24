@@ -1,4 +1,4 @@
-package ch06_array.sec05_array_search_sort;
+package ch06_Array.sec04_Array_SearchSort;
 
 // 정렬해서 1,3,4,5,7 만들기
 

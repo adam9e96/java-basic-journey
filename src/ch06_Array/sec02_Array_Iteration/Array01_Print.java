@@ -1,9 +1,9 @@
-package ch06_array.sec02_array_iteration;
+package ch06_Array.sec02_Array_Iteration;
 
 /*
  * 배열의 요소를 출력하고, 각 요소의 인덱스를 표시하기
  */
-public class Array_04_Print {
+public class Array01_Print {
     public static void main(String[] args) {
         /*
          * 배열의 요소 출력하기

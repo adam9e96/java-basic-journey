@@ -1,6 +1,6 @@
-package ch06_array.sec01_array_basic;
+package ch06_Array.sec01_Array;
 
-public class Array_01_WhyUseArrays {
+public class Array01_WhyUseArrays {
     public static void main(String[] args) {
         /*
          * 학생 5명의 성적을 가지고 총점과 평균을 구함
