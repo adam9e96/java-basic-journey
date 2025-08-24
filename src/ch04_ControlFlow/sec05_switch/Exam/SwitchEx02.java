@@ -1,4 +1,4 @@
-package ch04_controlflow.sec05_switch.Exam;
+package ch04_ControlFlow.sec05_switch.Exam;
 
 import java.util.Scanner;
 

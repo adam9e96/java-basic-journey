@@ -1,4 +1,4 @@
-package ch03_operators;
+package ch03_Operators.sec04_Comparison_Operator;
 
 public class StringComparison {
     public static void main(String[] args) {

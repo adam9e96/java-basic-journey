@@ -1,4 +1,4 @@
-package ch04_controlflow.sec05_switch;
+package ch04_ControlFlow.sec05_switch;
 
 public class SwitchExample04_Expression {
     public static void main(String[] args) {

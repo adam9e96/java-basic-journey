@@ -1,4 +1,4 @@
-package ch04_controlflow.sec01_if;
+package ch04_ControlFlow.sec01_If;
 
 // if 문
 // 조건이 참일 때 원하는 코드를 실행시킴

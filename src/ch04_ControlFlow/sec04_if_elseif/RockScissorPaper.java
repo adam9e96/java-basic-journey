@@ -1,4 +1,4 @@
-package ch04_controlflow.sec04_if_elseif;
+package ch04_ControlFlow.sec04_if_elseif;
 
 import java.util.Scanner;
 import java.util.Random;

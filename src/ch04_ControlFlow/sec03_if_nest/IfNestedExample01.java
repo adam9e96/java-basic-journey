@@ -1,4 +1,4 @@
-package ch04_controlflow.sec03_if_nest;
+package ch04_ControlFlow.sec03_if_nest;
 
 /*
  * if-else 문을 중첩하여 사용한 예제
