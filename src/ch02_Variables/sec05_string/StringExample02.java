@@ -1,4 +1,4 @@
-package ch02_variables.sec05_string;
+package ch02_Variables.sec05_string;
 
 public class StringExample02 {
     public static void main(String[] args) {

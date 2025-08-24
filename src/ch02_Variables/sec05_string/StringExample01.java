@@ -1,4 +1,4 @@
-package ch02_variables.sec05_string;
+package ch02_Variables.sec05_string;
 
 /**
  * 작은 따옴표('')로 감싼 한 개의 문자는 char 타입,

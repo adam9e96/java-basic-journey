@@ -1,7 +1,7 @@
-package ch02_variables.sec07_naming;
+package ch02_Variables.sec07_naming;
 
-public class VariableNaming {
-    public static void main(String[] args) {
+public class VariableNaming { // 클래스는 대문자로 시작
+    public static void main(String[] args) { // 메소드는 소문자로 카멜케이스
 
         // 변수 명명 규칙 연습
         // 올바른 변수명들

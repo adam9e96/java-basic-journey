@@ -1,4 +1,4 @@
-package ch02_variables.sec08_type_conversion;
+package ch02_Variables.sec08_type_conversion;
 
 public class TypeConversionEx01 {
 	public static void main(String[] atgs) {

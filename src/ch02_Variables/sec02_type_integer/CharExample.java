@@ -1,4 +1,4 @@
-package ch02_variables.sec01_variable;
+package ch02_Variables.sec02_type_integer;
 
 public class CharExample {
     public static void main(String[] args) {

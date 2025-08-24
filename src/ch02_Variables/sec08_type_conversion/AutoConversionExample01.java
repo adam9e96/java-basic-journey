@@ -1,4 +1,4 @@
-package ch02_variables.sec08_type_conversion;
+package ch02_Variables.sec08_type_conversion;
 
 public class AutoConversionExample01 {
     public static void main(String[] args) {

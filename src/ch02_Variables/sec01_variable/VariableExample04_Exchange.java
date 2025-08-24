@@ -1,4 +1,4 @@
-package ch02_variables.sec01_variable;
+package ch02_Variables.sec01_variable;
 
 // 변수 값 교환하기
 public class VariableExample04_Exchange {

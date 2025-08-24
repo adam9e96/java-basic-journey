@@ -1,4 +1,4 @@
-package ch02_variables.sec04_boolean;
+package ch02_Variables.sec04_boolean;
 
 public class BooleanExample01 {
     public static void main(String[] args) {

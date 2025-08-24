@@ -1,4 +1,4 @@
-package ch02_variables.sec01_variable;
+package ch02_Variables.sec01_variable;
 
 public class VariableExample02_Initialization {
     public static void main(String[] args) {
