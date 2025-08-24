@@ -1,4 +1,4 @@
-package ch02_variables.sec06_final;
+package ch02_Variables.sec06_final;
 
 public class FinalExample01 {
     public static void main(String[] args) {

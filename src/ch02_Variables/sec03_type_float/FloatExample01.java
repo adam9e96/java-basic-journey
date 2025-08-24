@@ -1,4 +1,4 @@
-package ch02_variables.sec03_type_float;
+package ch02_Variables.sec03_type_float;
 
 public class FloatExample01 {
     public static void main(String[] args) {

@@ -1,4 +1,4 @@
-package ch02_variables.sec02_type_integer;
+package ch02_Variables.sec02_type_integer;
 
 /**
  * 정수 타입

@@ -1,4 +1,4 @@
-package ch02_variables.sec08_type_conversion;
+package ch02_Variables.sec08_type_conversion;
 
 // 큰타입 -> 작은타입으로 변환할 땐 명시적 형 변환(casting)이 필요하고
 // 데이터 손실 가능성이 있음
