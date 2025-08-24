@@ -1,4 +1,4 @@
-package ch07_method.sec02_ex;
+package ch07_Method.sec02_ex;
 
 /**
  * 주어진 밑변과 높이를 사용하여 사각형의 넓이를 계산하는 메서드를 만들기

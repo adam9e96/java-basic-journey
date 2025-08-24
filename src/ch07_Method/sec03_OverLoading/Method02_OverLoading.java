@@ -1,4 +1,4 @@
-package ch07_method.sec03_OverLoading;
+package ch07_Method.sec03_OverLoading;
 
 public class Method02_OverLoading {
     public static void main(String[] args) {

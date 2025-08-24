@@ -1,4 +1,4 @@
-package ch07_method.sec01;
+package ch07_Method.sec01_Method_Use;
 
 public class Method02 {
 

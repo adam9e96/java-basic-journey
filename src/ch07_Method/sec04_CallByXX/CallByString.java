@@ -1,4 +1,4 @@
-package ch07_method.sec04_CallByXX;
+package ch07_Method.sec04_CallByXX;
 
 /**
  * 문자열에 의한 호출 방식
@@ -7,7 +7,7 @@ package ch07_method.sec04_CallByXX;
  * 문자열타입도 참조자료형이긴한데 사용빈도가 높아서 String은 예외임
  *
  */
-public class CallByString01 {
+public class CallByString {
 
     public static String setAddress(String addr) {
         addr = "경기도 수원시 장안구";

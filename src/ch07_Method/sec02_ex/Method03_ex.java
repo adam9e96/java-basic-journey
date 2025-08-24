@@ -1,4 +1,4 @@
-package ch07_method.sec02_ex;
+package ch07_Method.sec02_ex;
 
 /**
  * 1. 문자열 하나를 매개변수로 받아 해당 문자열의 길이를 반환하는 메서드

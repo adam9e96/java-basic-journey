@@ -1,4 +1,4 @@
-package ch07_method.sec04_CallByXX;
+package ch07_Method.sec04_CallByXX;
 
 /**
  * 값에 의한 호출 방식

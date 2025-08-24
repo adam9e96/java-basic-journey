@@ -1,4 +1,4 @@
-package ch07_method.sec01;
+package ch07_Method.sec01_Method_Use;
 
 /**
  * 메서드를 쓰면 같은 코드를 여러번 작성하지않아도 되고(중복 제거=> 재사용성)

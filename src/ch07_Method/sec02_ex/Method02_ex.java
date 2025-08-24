@@ -1,4 +1,4 @@
-package ch07_method.sec02_ex;
+package ch07_Method.sec02_ex;
 
 /**
  * 두 숫자의 합을 계산하는 메서드를 이용하여 계산하기

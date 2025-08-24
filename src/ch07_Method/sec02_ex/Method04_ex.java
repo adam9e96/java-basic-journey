@@ -1,4 +1,4 @@
-package ch07_method.sec02_ex;
+package ch07_Method.sec02_ex;
 
 /**
  * 2. 정수를 매개변수로 받아 짝수면 "Even", 홀수면 "Odd"를 반환하는 메서드

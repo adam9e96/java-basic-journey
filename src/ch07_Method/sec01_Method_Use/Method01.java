@@ -1,4 +1,4 @@
-package ch07_method.sec01;
+package ch07_Method.sec01_Method_Use;
 
 /**
  * 기본 사칙연산 메서드로 해보기

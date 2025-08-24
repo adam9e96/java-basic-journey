@@ -1,4 +1,4 @@
-package ch07_method.sec02_ex;
+package ch07_Method.sec02_ex;
 
 import java.io.*;
 import java.util.Scanner;

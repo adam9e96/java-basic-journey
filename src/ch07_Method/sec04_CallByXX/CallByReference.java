@@ -1,4 +1,4 @@
-package ch07_method.sec04_CallByXX;
+package ch07_Method.sec04_CallByXX;
 
 import java.util.Arrays;
 
