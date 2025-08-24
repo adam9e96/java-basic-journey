@@ -1,4 +1,4 @@
-package ch05_loop.sec01_ForLoop.nested;
+package ch05_Loop.sec01_For_Loop.nested;
 
 /*
  *    *

@@ -1,4 +1,4 @@
-package ch05_loop.sec04_break;
+package ch05_Loop.sec04_Break;
 
 import java.util.Scanner;
 // break는 가장 가까운 loop(반복문)를 빠져나옴

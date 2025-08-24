@@ -1,4 +1,4 @@
-package ch03_operators.set05_logical_operator;
+package ch03_Operators.sec05_Logical_Operator;
 
 public class LogicalOperatorExample02 {
 	

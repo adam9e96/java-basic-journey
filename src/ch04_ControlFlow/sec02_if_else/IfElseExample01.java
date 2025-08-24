@@ -1,4 +1,4 @@
-package ch04_controlflow.sec02_if_else;
+package ch04_ControlFlow.sec02_if_else;
 
 
 public class IfElseExample01 {

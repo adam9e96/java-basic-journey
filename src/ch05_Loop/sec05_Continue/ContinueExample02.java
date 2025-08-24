@@ -1,4 +1,4 @@
-package ch05_loop.sec_continue;
+package ch05_Loop.sec05_Continue;
 
 public class ContinueExample02 {
     public static void main(String[] args) {
