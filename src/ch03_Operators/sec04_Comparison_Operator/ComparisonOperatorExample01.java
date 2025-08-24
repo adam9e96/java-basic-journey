@@ -1,4 +1,4 @@
-package ch03_operators.sec04_comparison_operators;
+package ch03_Operators.sec04_Comparison_Operator;
 
 // 비교 연산자
 public class ComparisonOperatorExample01 {

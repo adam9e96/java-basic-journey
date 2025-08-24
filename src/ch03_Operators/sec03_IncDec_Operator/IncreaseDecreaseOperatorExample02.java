@@ -1,4 +1,4 @@
-package ch03_operators.sec03_inc_dec_operators;
+package ch03_Operators.sec03_IncDec_Operator;
 
 public class IncreaseDecreaseOperatorExample02 {
 
