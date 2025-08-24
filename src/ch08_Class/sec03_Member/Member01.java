@@ -1,4 +1,4 @@
-package ch08_class.sec03_member;
+package ch08_Class.sec03_Member;
 
 class Student {
     // 인스턴스 멤버 (객체마다 개별적으로 존재함)

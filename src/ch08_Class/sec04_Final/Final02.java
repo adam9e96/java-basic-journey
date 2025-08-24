@@ -1,4 +1,4 @@
-package ch08_class.sec04_final;
+package ch08_Class.sec04_Final;
 
 // 상수
 // 상수는 객체마다 저장할 필요가 없고 여러개의 값을 가져도 안되기

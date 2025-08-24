@@ -1,4 +1,4 @@
-package ch11_class;
+package ch08_Class.sec01_ClassUse;
 
 import java.util.Scanner;
 

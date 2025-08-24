@@ -1,4 +1,4 @@
-package ch08_class.sec04_final;
+package ch08_Class.sec04_Final;
 
 /**
  * final 필드 초기화 방법

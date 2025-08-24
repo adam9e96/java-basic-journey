@@ -1,4 +1,4 @@
-package ch08_class.sec05_ex.studentManagement;
+package ch08_Class.sec05_ex.studentManagement;
 
 import java.util.Scanner;
 

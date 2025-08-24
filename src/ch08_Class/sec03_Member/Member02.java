@@ -1,4 +1,4 @@
-package ch08_class.sec03_member;
+package ch08_Class.sec03_Member;
 
 // 정적 멤버 사용 예제
 class Calculator {
