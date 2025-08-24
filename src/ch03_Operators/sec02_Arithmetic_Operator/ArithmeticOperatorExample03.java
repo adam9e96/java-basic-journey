@@ -1,9 +1,8 @@
-package ch03_operators;
+package ch03_Operators.sec02_Arithmetic_Operator;
 
-import java.sql.SQLOutput;
 import java.util.Scanner;
 
-public class OperatorsAdd {
+public class ArithmeticOperatorExample03 {
     public static void main(String[] args) {
 
         /*

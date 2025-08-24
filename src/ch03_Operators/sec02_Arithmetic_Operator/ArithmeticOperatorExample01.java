@@ -1,4 +1,4 @@
-package ch03_operators.sec02_arithmeticOperator;
+package ch03_Operators.sec02_Arithmetic_Operator;
 
 import java.util.Scanner;
 // 산술 연산자(사칙연산)
