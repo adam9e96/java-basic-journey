@@ -1,4 +1,4 @@
-package ch01_basics;
+package ch01_Basics;
 
 public class HelloWorld {
     public static void main(String[] args) { // main() 메소드 선언. 프로그램의 시작점이다.
